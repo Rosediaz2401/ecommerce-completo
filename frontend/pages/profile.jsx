@@ -24,7 +24,7 @@ export default function Profile({user, orders}){
                 <p>{user.email}</p>
                 <div>
                     {orders.map(order =>(
-                        <Order>
+                        <Order key={order.id}>
                             <h1>Número de orden: {order.id}</h1>
                             <h2>Monto: {formatMoney(order.amount)}</h2>
                             <h2>Recibo Email: {user.email}</h2>
